@@ -24,10 +24,10 @@ public class InstanceCoal : MonoBehaviour {
     {
         if(col.transform.tag == "Shovel")
         {
-            if (col.gameObject.GetComponentInParent<Shovel>()._isSnap == true)
+            if (col.gameObject.GetComponentInParent<Shovel>()._isSnap == false)
             {
                 col.gameObject.GetComponentInParent<Shovel>()._coalSnap();
-                col.gameObject.GetComponentInParent<Shovel>()._isSnap = false;
+                col.gameObject.GetComponentInParent<Shovel>()._isSnap = true;
             }
         }
     }
