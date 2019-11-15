@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shovel
+  - Cubes
+  - Spheres
+  - Leg
+  - Arm
+  - Saucers
+  - Torso
+  - OtherSaucers
+  - Coal
   layers:
   - Default
   - TransparentFX
