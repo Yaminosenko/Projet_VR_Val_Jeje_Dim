@@ -46,6 +46,7 @@ public class Shovel : MonoBehaviour {
         foreach (GameObject _coalChild in _coal)
         {
             _coalChild.GetComponent<FixedJoint>().breakForce = 0;
+            _coalChild.GetComponent<FixedJoint>().connectedBody = null;
             Destroy(_coalChild, 2f);
         }
     }
