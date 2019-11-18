@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Examples/Scenes/Showcase.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scene/Dimitest.unity
+    guid: 66ac5a4bde2fb6e4682239096bd8faaf
+  - enabled: 0
+    path: Assets/VRWaterShader2/VRWaterShader(legacy)/DemoScenes/DemoScene.unity
+    guid: 7fcd4acbfa2e64a4c83550c01e140b37
+  m_configObjects: {}
