@@ -37,7 +37,9 @@ public class Shovel : MonoBehaviour {
             GameObject _coalChild = Instantiate(_prefabCoal, _offsets[i].transform.position, _offsets[i].transform.rotation);
             _coalChild.transform.parent = gameObject.transform;
             _coal.Add(_coalChild);
-            _coalChild.GetComponent<FixedJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
+           // _coalChild.GetComponent<FixedJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
+
+            _coalChild.GetComponent<CharacterJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
         }
     }
 
@@ -45,8 +47,11 @@ public class Shovel : MonoBehaviour {
     {
         foreach (GameObject _coalChild in _coal)
         {
-            _coalChild.GetComponent<FixedJoint>().breakForce = 0;
-            _coalChild.GetComponent<FixedJoint>().connectedBody = null;
+            //_coalChild.GetComponent<FixedJoint>().breakForce = 0;
+            //_coalChild.GetComponent<FixedJoint>().connectedBody = null;
+
+            _coalChild.GetComponent<CharacterJoint>().breakForce = 0;
+            _coalChild.GetComponent<CharacterJoint>().connectedBody = null;
             Destroy(_coalChild, 2f);
         }
     }
