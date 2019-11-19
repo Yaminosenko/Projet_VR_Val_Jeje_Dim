@@ -9,13 +9,16 @@ public class FourScript : MonoBehaviour {
 
     public Image _jauge;
     public Image _vapeur;
+    public Image _gigaMax;
     public Canvas _can;
     public VRTK_ArtificialRotator _levier;
 
     private float _maxJauge = 100;
+    private float _maxJaugeGigaMax = 300;
     private float _burnCoal = 0;
     [SerializeField] private float _currentJauge;
     [SerializeField] private float _currentJaugeVapeur;
+    [SerializeField] private float _jaugeGigaMax;
     [SerializeField] private float _currentDecrease;
     [SerializeField] private float _initialDeacrease;
     [SerializeField] private float _currentIncrease;
@@ -75,6 +78,7 @@ public class FourScript : MonoBehaviour {
         Jauge();
         UpdateJauge();
         UpdateJaugeVapeur();
+        UpdateJaugeGigaMax();
     }
 
 
@@ -121,6 +125,7 @@ public class FourScript : MonoBehaviour {
         if(_vapeurOut == true)
         {
             _currentJaugeVapeur -= _maxJauge * Time.deltaTime;
+            _jaugeGigaMax += _maxJauge * Time.deltaTime;
             _currentJauge -= 10 * Time.deltaTime;
 
             if(_currentJaugeVapeur <= 0)
@@ -132,6 +137,7 @@ public class FourScript : MonoBehaviour {
 
         _currentJauge = Mathf.Clamp(_currentJauge, 0, 100);
         _currentJaugeVapeur = Mathf.Clamp(_currentJaugeVapeur, 0, 100);
+        _jaugeGigaMax = Mathf.Clamp(_jaugeGigaMax, 0, _maxJaugeGigaMax);
     }
 
     void UpdateJauge()
@@ -158,6 +164,18 @@ public class FourScript : MonoBehaviour {
         Vector3 newScale = _vapeur.transform.localScale;
         newScale.y = ratio;
         _vapeur.transform.localScale = newScale;
+    }
+
+    void UpdateJaugeGigaMax()
+    {
+        float ratio = (float)_jaugeGigaMax / (float)_maxJaugeGigaMax;
+
+        //Debug.Log(ratio);
+        Mathf.Clamp01(ratio);
+
+        Vector3 newScale = _gigaMax.transform.localScale;
+        newScale.y = ratio;
+        _gigaMax.transform.localScale = newScale;
     }
 
 }
