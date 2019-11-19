@@ -82,7 +82,7 @@ public class FourScript : MonoBehaviour {
     {
         if (_currentJauge >= 0 && _currentJauge < 25)
         {
-            _currentJauge -= (_currentDecrease + 4) * Time.deltaTime;
+            _currentJauge -= (_currentDecrease + 3) * Time.deltaTime;
         }
         else if (_currentJauge >= 25 && _currentJauge < 50)
         {
@@ -121,6 +121,7 @@ public class FourScript : MonoBehaviour {
         if(_vapeurOut == true)
         {
             _currentJaugeVapeur -= _maxJauge * Time.deltaTime;
+            _currentJauge -= 10 * Time.deltaTime;
 
             if(_currentJaugeVapeur <= 0)
             {
@@ -128,6 +129,9 @@ public class FourScript : MonoBehaviour {
                 _vapeurOut = false;
             }
         }
+
+        _currentJauge = Mathf.Clamp(_currentJauge, 0, 100);
+        _currentJaugeVapeur = Mathf.Clamp(_currentJaugeVapeur, 0, 100);
     }
 
     void UpdateJauge()
