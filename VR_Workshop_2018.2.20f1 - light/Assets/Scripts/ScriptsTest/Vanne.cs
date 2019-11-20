@@ -16,7 +16,6 @@ namespace VRTK
         [SerializeField] private bool _rightGrabTrigger = false;
         [SerializeField] private bool _leftGrabTrigger = false;
 
-
         private void Awake()
         {
             _theVanne = GetComponent<VRTK_ArtificialRotator>();
