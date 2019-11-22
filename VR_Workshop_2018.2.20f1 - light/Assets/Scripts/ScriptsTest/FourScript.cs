@@ -38,7 +38,9 @@
         private bool _isHot = false;
         private bool _vapeurOut = false;
         private bool _renoStart = false;
+        private bool _oneTime = false;
 
+        //public event CompleteHeate;
 
 
         private void Awake()
@@ -131,7 +133,14 @@
             }
 
 
-
+            if (_currentJauge >= 100)
+            {
+                if (_oneTime == false)
+                {
+                    _player._changeRespawn(1);
+                    _oneTime = true;
+                }
+            }
 
             Jauge();
             UpdateJauge();
