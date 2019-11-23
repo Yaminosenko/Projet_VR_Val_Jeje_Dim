@@ -76,6 +76,7 @@ namespace VRTK
                 }
                 else
                 {
+                    Debug.Log("qiqi");
                     _freeze._nearHeat = false;
                 }
             }

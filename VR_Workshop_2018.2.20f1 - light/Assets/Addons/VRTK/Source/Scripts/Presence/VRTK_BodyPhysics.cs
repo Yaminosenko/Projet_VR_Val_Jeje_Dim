@@ -994,6 +994,7 @@ namespace VRTK
 
             generatedContainer.layer = LayerMask.NameToLayer("Ignore Raycast");
             VRTK_PlayerObject.SetPlayerObject(generatedContainer, VRTK_PlayerObject.ObjectTypes.Collider);
+            generatedContainer.tag = "Player";
 
             return generatedContainer;
         }
@@ -1003,6 +1004,7 @@ namespace VRTK
             GameObject generatedContainer = Instantiate(objectToClone, parent);
             generatedContainer.name = VRTK_SharedMethods.GenerateVRTKObjectName(true, name);
             VRTK_PlayerObject.SetPlayerObject(generatedContainer, VRTK_PlayerObject.ObjectTypes.Collider);
+            
 
             return generatedContainer;
         }
