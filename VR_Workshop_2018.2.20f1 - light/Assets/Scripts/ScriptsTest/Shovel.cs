@@ -9,29 +9,33 @@ public class Shovel : MonoBehaviour {
     public List<GameObject> _coal = new List<GameObject>();
     public bool _isSnap = false;
 
-	// Use this for initialization
-	void Start () {
+    private Vector3 previousPosition;
+    private float speed;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            _coalSnap();
-            _isSnap = true;
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            UnsnapCoal();
-            _coal.Clear();
-            _isSnap = false;
-        }
-	}
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    _coalSnap();
+        //    _isSnap = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    UnsnapCoal();
+        //    _coal.Clear();
+        //    _isSnap = false;
+        //}
+
+    }
 
    public void _coalSnap()
     {
-        for (int i = 0; i < _offsets.Length; i++)
+        for (int i = 0; i < Random.Range(3,_offsets.Length); i++)
         {
             //Instantiate GameObject _coalChild = Instantiate(_coal, transform.position, _cone);
             GameObject _coalChild = Instantiate(_prefabCoal, _offsets[i].transform.position, _offsets[i].transform.rotation);
@@ -54,5 +58,10 @@ public class Shovel : MonoBehaviour {
             _coalChild.GetComponent<CharacterJoint>().connectedBody = null;
             Destroy(_coalChild, 2f);
         }
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 }
