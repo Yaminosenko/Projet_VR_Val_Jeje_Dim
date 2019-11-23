@@ -53,9 +53,9 @@ public class Shovel : MonoBehaviour {
         {
             //_coalChild.GetComponent<FixedJoint>().breakForce = 0;
             //_coalChild.GetComponent<FixedJoint>().connectedBody = null;
-
             _coalChild.GetComponent<CharacterJoint>().breakForce = 0;
             _coalChild.GetComponent<CharacterJoint>().connectedBody = null;
+            Destroy(_coalChild.GetComponent<CharacterJoint>());
             Destroy(_coalChild, 2f);
         }
     }

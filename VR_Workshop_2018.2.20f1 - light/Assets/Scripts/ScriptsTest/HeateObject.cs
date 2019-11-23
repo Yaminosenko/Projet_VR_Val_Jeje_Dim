@@ -14,6 +14,10 @@ public class HeateObject : MonoBehaviour {
     [SerializeField] private bool _leftGrabTrigger = false;
     public FrostEffect _freeze;
 
+    public enum Hand { Right, Left };
+    public bool _leftHand = false;
+    public bool _rightHand = false;
+
     private void Awake()
     {
         //_theVanne = GetComponent<VRTK_ArtificialRotator>();
@@ -64,26 +68,79 @@ public class HeateObject : MonoBehaviour {
         //    //_theVanne.angleLimits.maximum = 10;
         //}
 
-        if (_rightGrab.GetGrabbedObject() != null || _leftGrab.GetGrabbedObject() != null)
-        {
-            if (_rightGrab.GetGrabbedObject().layer == 8 || _leftGrab.GetGrabbedObject().layer == 8)
-            {
-                _freeze._nearHeat = true;
-            }
 
-        }
-        else
-        {
-            Debug.Log("qiqi");
-            _freeze._nearHeat = false;
-        }
+        GetGrabByLayer(8, _freeze._nearHeat);
+
+
+       
+
+       
 
 
 
         _rightGrab.GetGrabbedObject();
         _leftGrab.GetGrabbedObject();
-        //Debug.Log(_rightGrab.GetGrabbedObject());
-        //Debug.Log(_leftGrab.GetGrabbedObject());
+        Debug.Log(_rightGrab.GetGrabbedObject());
+        Debug.Log(_leftGrab.GetGrabbedObject());
+    }
+
+    private void Test()
+    {
+
+        switch (_leftHand)
+        {
+           case false:
+
+                break;
+            case true:
+                break;
+            default:
+                Debug.Log("ui");
+                break;
+        }
+    }
+
+    public void GetGrabByLayer(int _layer, bool condition)
+    {
+        if (_rightGrab.GetGrabbedObject() != null)
+        {
+
+            if (_rightGrab.GetGrabbedObject().layer == _layer)
+            {
+                _rightHand = true;
+                condition = true;
+            }
+            else
+            {
+                _rightHand = false;
+            }
+        }
+        else
+        {
+            _rightHand = false;
+        }
+
+        if (_leftGrab.GetGrabbedObject() != null)
+        {
+            if (_leftGrab.GetGrabbedObject().layer == _layer)
+            {
+                _leftHand = true;
+                condition = true;
+            }
+            else
+            {
+                _leftHand = false;
+            }
+        }
+        else
+        {
+            _leftHand = false;
+        }
+
+        if (_rightHand == false && _leftHand == false)
+        {
+            condition = false;
+        }
     }
 
 }
