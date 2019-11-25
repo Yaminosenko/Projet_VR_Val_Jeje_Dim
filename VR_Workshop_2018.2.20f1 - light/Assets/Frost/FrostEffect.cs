@@ -15,6 +15,7 @@ public class FrostEffect : MonoBehaviour
     public Shader Shader; //ImageBlendEffect.shader
     public bool _isOnTrigger = false;
     public bool _nearHeat = false;
+    public Player _playerManage; 
 	
 	private Material material;
 
@@ -33,6 +34,12 @@ public class FrostEffect : MonoBehaviour
         {
             FrostAmount += 0.05f * Time.deltaTime;
             distortion += 0.05f * Time.deltaTime;
+            if (FrostAmount >=0.59f)
+            {
+                _playerManage.DeathIsComing();
+                FrostAmount = 0;
+                distortion = 0;
+            }
         }
         else if (FrostAmount > 0 || distortion > 0)
         {
@@ -61,20 +68,5 @@ public class FrostEffect : MonoBehaviour
 		Graphics.Blit(source, destination, material);
 	}
 
-    //public void Freezeaaaaaaa()
-    //{
-    //    if (!Application.isPlaying)
-    //    {
-    //        material.SetTexture("_BlendTex", Frost);
-    //        material.SetTexture("_BumpMap", FrostNormals);
-    //        EdgeSharpness = Mathf.Max(1, EdgeSharpness);
-    //    }
-    //    material.SetFloat("_BlendAmount", Mathf.Clamp01(Mathf.Clamp01(FrostAmount) * (maxFrost - minFrost) + minFrost));
-    //    material.SetFloat("_EdgeSharpness", EdgeSharpness);
-    //    material.SetFloat("_SeeThroughness", seethroughness);
-    //    material.SetFloat("_Distortion", distortion);
-    //    Debug.Log("_Distortion: " + distortion);
-
-    //   // Graphics.Blit(source, destination, material);
-    //}
+    
 }
