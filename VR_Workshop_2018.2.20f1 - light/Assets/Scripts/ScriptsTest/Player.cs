@@ -15,6 +15,9 @@
         private VRTK_BasicTeleport _tp;
         public Transform _tpDestination;
         private DeathTeleportDestination _teleportDeath;
+        public GameObject _playerBody;
+        public GameObject _cameraRig;
+        private Transform _actualCameraTransform;
 
         public Transform[] _respawn;
          
@@ -43,7 +46,7 @@
 
         private void _fade_HeadsetUnfadeComplete(object sender, HeadsetFadeEventArgs e)
         {
-            //Debug.Log("4");
+            
         }
 
         private void _fade_HeadsetUnfadeStart(object sender, HeadsetFadeEventArgs e)
@@ -55,6 +58,9 @@
         {
            // Debug.Log("2");
             //_tp.Teleport(_tpDestination,_tpDestination.position, _tpDestination.rotation,true);
+            
+            _actualCameraTransform = _cameraRig.transform;
+            GameObject _deadBody = Instantiate(_playerBody, _actualCameraTransform.position, _actualCameraTransform.rotation);
             _teleportDeath.TeleportBrooo(_tpDestination);
             _fade.Unfade(1f);
         }
@@ -74,6 +80,7 @@
             if (_urDead == true)
             {
                 _fade.Fade(Color.black, 1f);
+
                 _urDead = false;
             }
         }
@@ -88,6 +95,11 @@
         public void _changeRespawn(int _nbRespawn)
         {
             _tpDestination = _respawn[_nbRespawn];
+        }
+
+        public void DeathIsComing()
+        {
+
         }
     }
 }

@@ -39,6 +39,9 @@ public class FrostEffect : MonoBehaviour
             FrostAmount -= 0.05f * Time.deltaTime;
             distortion -= 0.05f * Time.deltaTime;
         }
+
+        //Debug.Log(_isOnTrigger);
+        //Debug.Log(_nearHeat);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
