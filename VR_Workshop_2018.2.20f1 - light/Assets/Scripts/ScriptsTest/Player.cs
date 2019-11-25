@@ -1,9 +1,11 @@
-﻿namespace VRTK {
+﻿
     using System.Collections;
     using System.Collections.Generic;
-    using UnityEngine;
+using System.Linq;
+using UnityEngine;
     using UnityEngine.UI;
     using VRTK;
+    using VRTK.Controllables.ArtificialBased;
 
     public class Player : MonoBehaviour
     {
@@ -18,6 +20,9 @@
         public GameObject _playerBody;
         public GameObject _cameraRig;
         private Transform _actualCameraTransform;
+        private SliderFrostArea _sliderManager;
+        public bool _isInFrostArea;
+        public Rigidbody[] _arrayRd;
 
         public Transform[] _respawn;
          
@@ -29,8 +34,11 @@
         {
             _fade = GetComponent<VRTK_HeadsetFade>();
             _teleportDeath = GetComponent<DeathTeleportDestination>();
+        _sliderManager = GetComponent<SliderFrostArea>();
+       
 
-            _fade.HeadsetFadeStart += _fade_HeadsetFadeStart;
+
+        _fade.HeadsetFadeStart += _fade_HeadsetFadeStart;
             _fade.HeadsetFadeComplete += _fade_HeadsetFadeComplete;
             _fade.HeadsetUnfadeStart += _fade_HeadsetUnfadeStart;
             _fade.HeadsetUnfadeComplete += _fade_HeadsetUnfadeComplete;
@@ -61,6 +69,10 @@
             
             _actualCameraTransform = _cameraRig.transform;
             GameObject _deadBody = Instantiate(_playerBody, _actualCameraTransform.position, _actualCameraTransform.rotation);
+            if (_isInFrostArea == true)
+            {
+                
+            }
             _teleportDeath.TeleportBrooo(_tpDestination);
             _fade.Unfade(1f);
         }
@@ -99,8 +111,13 @@
 
         public void DeathIsComing()
         {
-
+             _urDead = true;
+        
+            if (_sliderManager._isPull[0] == true && _sliderManager._isPull[1] == true)
+            {
+                _sliderManager.ChangeSlider();
+            }
         }
     }
-}
+
 

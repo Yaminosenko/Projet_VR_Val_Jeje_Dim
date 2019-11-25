@@ -5,6 +5,7 @@ using UnityEngine;
 public class FrostArea : MonoBehaviour {
 
     public FrostEffect _frostEffect;
+    public Player _player;
 
 
     private void OnTriggerStay(Collider col)
@@ -12,6 +13,7 @@ public class FrostArea : MonoBehaviour {
         if (col.tag == "Player")
         {
             _frostEffect._isOnTrigger = true;
+            _player._isInFrostArea = true;
         }
     }
 
@@ -20,6 +22,7 @@ public class FrostArea : MonoBehaviour {
         if (col.tag == "Player")
         {
             _frostEffect._isOnTrigger = false;
+            _player._isInFrostArea = false;
         }
     }
 }
