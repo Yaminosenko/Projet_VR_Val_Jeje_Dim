@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4202152675765058}
   - component: {fileID: 95762677872427418}
   m_Layer: 0
-  m_Name: body
+  m_Name: SkelMesh_Bodyguard_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
