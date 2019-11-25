@@ -95,6 +95,8 @@ public class SliderFrostArea : MonoBehaviour {
                         _isPull[i] = false;
                     }
 
+                    //_isPull[i] = _value >= 0.35f ? true : false;
+
 
                     if (slider[i].GetControlInteractableObject().IsGrabbed() == false)
                     {
@@ -109,20 +111,25 @@ public class SliderFrostArea : MonoBehaviour {
     {
         _arraySlider++;
         _listGoupe.Clear();
-        _lightRenderer = _light[_arraySlider].GetComponent<Renderer>();
-        
-        for (int i = 0; i < _isPull.Length; i++)
-        {
-            _isPull[i] = false;
-        }
 
-        if (_arraySlider == 1)
+        if (_arraySlider > 2)
         {
-            _listGoupe.Add(_slider2);
+            _lightRenderer = _light[_arraySlider].GetComponent<Renderer>();
+
+            for (int i = 0; i < _isPull.Length; i++)
+            {
+                _isPull[i] = false;
+            }
+
+            if (_arraySlider == 1)
+            {
+                _listGoupe.Add(_slider2);
+            }
+            else if (_arraySlider == 2)
+            {
+                _listGoupe.Add(_slider3);
+            }
         }
-        else if (_arraySlider == 2)
-        {
-            _listGoupe.Add(_slider3);
-        }
+        
     }
 }

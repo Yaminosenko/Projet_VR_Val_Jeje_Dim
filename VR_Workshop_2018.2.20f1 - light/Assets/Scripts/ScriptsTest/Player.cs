@@ -71,7 +71,11 @@ using UnityEngine;
             GameObject _deadBody = Instantiate(_playerBody, _actualCameraTransform.position, _actualCameraTransform.rotation);
             if (_isInFrostArea == true)
             {
-                
+            _arrayRd = _deadBody.GetComponentsInChildren<Rigidbody>();
+            foreach (Rigidbody item in _arrayRd)
+            {
+                item.isKinematic = true;
+            }
             }
             _teleportDeath.TeleportBrooo(_tpDestination);
             _fade.Unfade(1f);
