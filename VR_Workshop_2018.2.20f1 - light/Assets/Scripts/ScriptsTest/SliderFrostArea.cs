@@ -112,7 +112,7 @@ public class SliderFrostArea : MonoBehaviour {
         _arraySlider++;
         _listGoupe.Clear();
 
-        if (_arraySlider > 2)
+        if (_arraySlider < 3)
         {
             _lightRenderer = _light[_arraySlider].GetComponent<Renderer>();
 
@@ -129,7 +129,6 @@ public class SliderFrostArea : MonoBehaviour {
             {
                 _listGoupe.Add(_slider3);
             }
-        }
-        
+        }  
     }
 }

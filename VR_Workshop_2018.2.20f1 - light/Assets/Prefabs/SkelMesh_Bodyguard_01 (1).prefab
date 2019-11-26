@@ -54,8 +54,8 @@ GameObject:
   - component: {fileID: 144917637608462496}
   - component: {fileID: 114477095326556650}
   - component: {fileID: 114195560295860298}
-  - component: {fileID: 114376373062976466}
   - component: {fileID: 114084582273384026}
+  - component: {fileID: 114765934070899682}
   m_Layer: 0
   m_Name: RightUpLeg
   m_TagString: Untagged
@@ -90,9 +90,9 @@ GameObject:
   - component: {fileID: 136135829746698644}
   - component: {fileID: 144001583597618326}
   - component: {fileID: 114822322091548486}
-  - component: {fileID: 114895759938005342}
   - component: {fileID: 114829312725309750}
   - component: {fileID: 114236384899306658}
+  - component: {fileID: 114371844662776924}
   m_Layer: 0
   m_Name: RightArmRoll
   m_TagString: Untagged
@@ -128,8 +128,8 @@ GameObject:
   - component: {fileID: 144462417686333270}
   - component: {fileID: 114252570463310830}
   - component: {fileID: 114710222694021342}
-  - component: {fileID: 114097027504449960}
   - component: {fileID: 114395858325003766}
+  - component: {fileID: 114118564735704566}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: Untagged
@@ -363,8 +363,8 @@ GameObject:
   - component: {fileID: 144789660549737694}
   - component: {fileID: 114899721760759046}
   - component: {fileID: 114265969128670266}
-  - component: {fileID: 114645911113300652}
   - component: {fileID: 114076775173779786}
+  - component: {fileID: 114535490491219140}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -445,8 +445,8 @@ GameObject:
   - component: {fileID: 144984872711764530}
   - component: {fileID: 114952494422221268}
   - component: {fileID: 114784194897992680}
-  - component: {fileID: 114099348512789316}
   - component: {fileID: 114086853701136186}
+  - component: {fileID: 114715467597289248}
   m_Layer: 0
   m_Name: LeftForeArm
   m_TagString: Untagged
@@ -573,8 +573,8 @@ GameObject:
   - component: {fileID: 144502862119803422}
   - component: {fileID: 114111948401604054}
   - component: {fileID: 114872781008181228}
-  - component: {fileID: 114892491855459166}
   - component: {fileID: 114913199823797244}
+  - component: {fileID: 114954418248131654}
   m_Layer: 0
   m_Name: LeftArm
   m_TagString: Untagged
@@ -791,8 +791,8 @@ GameObject:
   - component: {fileID: 144366948146752078}
   - component: {fileID: 114460214930826682}
   - component: {fileID: 114162929539388406}
-  - component: {fileID: 114354350948174830}
   - component: {fileID: 114643136547219358}
+  - component: {fileID: 114666395645388312}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -812,11 +812,11 @@ GameObject:
   - component: {fileID: 65935344200277748}
   - component: {fileID: 114377248895628774}
   - component: {fileID: 114726335806179316}
-  - component: {fileID: 114845769986532230}
   - component: {fileID: 114988210906988034}
+  - component: {fileID: 114078865835279790}
   m_Layer: 0
   m_Name: Hips
-  m_TagString: Untagged
+  m_TagString: Corps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1092,9 +1092,9 @@ GameObject:
   - component: {fileID: 136817607675845944}
   - component: {fileID: 144629861964145644}
   - component: {fileID: 114651581367508208}
-  - component: {fileID: 114692336822085062}
   - component: {fileID: 114427043792640770}
   - component: {fileID: 114868702386075848}
+  - component: {fileID: 114401442338996476}
   m_Layer: 0
   m_Name: RightArm
   m_TagString: Untagged
@@ -1160,8 +1160,8 @@ GameObject:
   - component: {fileID: 144506042926396690}
   - component: {fileID: 114473215402803186}
   - component: {fileID: 114418251544345654}
-  - component: {fileID: 114779688619966574}
   - component: {fileID: 114613608157886654}
+  - component: {fileID: 114718071412175494}
   m_Layer: 0
   m_Name: Spine
   m_TagString: Untagged
@@ -1197,8 +1197,8 @@ GameObject:
   - component: {fileID: 144455703317427554}
   - component: {fileID: 114490054660630918}
   - component: {fileID: 114326660474022346}
-  - component: {fileID: 114993749958678886}
   - component: {fileID: 114861325730296624}
+  - component: {fileID: 114398488393291396}
   m_Layer: 0
   m_Name: LeftUpLeg
   m_TagString: Untagged
@@ -1471,7 +1471,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1149339685471356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.418, y: 1.3912944e-16, z: 38.284164}
+  m_LocalPosition: {x: 8.79, y: 1.8197677e-16, z: 36.354496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4769008718388954}
@@ -2439,7 +2439,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117054778982038}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2454,7 +2454,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908094385261194}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2469,7 +2469,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1105031551749448}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2484,7 +2484,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1841939763959054}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2499,7 +2499,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903806787412346}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2514,7 +2514,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444984792706140}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -2529,7 +2529,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386668418775902}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2544,7 +2544,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278299282413992}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2559,7 +2559,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631886423581802}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2574,7 +2574,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028626133388094}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -2589,7 +2589,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635124747592436}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2660,7 +2660,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114645911113300652}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114265969128670266}
   isUsable: 0
   holdButtonToUse: 1
@@ -2671,6 +2671,27 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114078865835279790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635124747592436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114084582273384026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2692,7 +2713,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114376373062976466}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114195560295860298}
   isUsable: 0
   holdButtonToUse: 1
@@ -2724,7 +2745,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114099348512789316}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114784194897992680}
   isUsable: 0
   holdButtonToUse: 1
@@ -2735,40 +2756,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114097027504449960
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117054778982038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
---- !u!114 &114099348512789316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1386668418775902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114111948401604054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2801,6 +2788,27 @@ MonoBehaviour:
   intervalOnUse: 0.05
   cancelOnUnuse: 1
   objectToAffect: {fileID: 0}
+--- !u!114 &114118564735704566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117054778982038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114162929539388406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2909,15 +2917,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114354350948174830
+--- !u!114 &114371844662776924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1631886423581802}
+  m_GameObject: {fileID: 1105031551749448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   precisionGrab: 1
@@ -2926,23 +2934,10 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
---- !u!114 &114376373062976466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1028626133388094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114377248895628774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2996,7 +2991,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114097027504449960}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114710222694021342}
   isUsable: 0
   holdButtonToUse: 1
@@ -3007,6 +3002,48 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114398488393291396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908094385261194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
+--- !u!114 &114401442338996476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841939763959054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114418251544345654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3157,6 +3194,27 @@ MonoBehaviour:
   intervalOnUse: 0.05
   cancelOnUnuse: 1
   objectToAffect: {fileID: 0}
+--- !u!114 &114535490491219140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278299282413992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114613608157886654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3178,7 +3236,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114779688619966574}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114418251544345654}
   isUsable: 0
   holdButtonToUse: 1
@@ -3210,7 +3268,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114354350948174830}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114162929539388406}
   isUsable: 0
   holdButtonToUse: 1
@@ -3221,23 +3279,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114645911113300652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1278299282413992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114651581367508208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3259,7 +3300,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114692336822085062}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114427043792640770}
   isUsable: 0
   holdButtonToUse: 1
@@ -3270,15 +3311,15 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114692336822085062
+--- !u!114 &114666395645388312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1841939763959054}
+  m_GameObject: {fileID: 1631886423581802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   precisionGrab: 1
@@ -3287,6 +3328,10 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114710222694021342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3298,6 +3343,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114715467597289248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386668418775902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
+--- !u!114 &114718071412175494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903806787412346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114726335806179316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3309,15 +3396,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114779688619966574
+--- !u!114 &114765934070899682
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1903806787412346}
+  m_GameObject: {fileID: 1028626133388094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   precisionGrab: 1
@@ -3326,6 +3413,10 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114784194897992680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3358,7 +3449,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114895759938005342}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114829312725309750}
   isUsable: 0
   holdButtonToUse: 1
@@ -3380,23 +3471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114845769986532230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635124747592436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114861325730296624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3418,7 +3492,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114993749958678886}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114326660474022346}
   isUsable: 0
   holdButtonToUse: 1
@@ -3472,40 +3546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114892491855459166
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444984792706140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
---- !u!114 &114895759938005342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1105031551749448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114899721760759046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3559,7 +3599,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114892491855459166}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114872781008181228}
   isUsable: 0
   holdButtonToUse: 1
@@ -3602,6 +3642,27 @@ MonoBehaviour:
   intervalOnUse: 0.05
   cancelOnUnuse: 1
   objectToAffect: {fileID: 0}
+--- !u!114 &114954418248131654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444984792706140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity
+  maxDistanceDelta: 10
 --- !u!114 &114988210906988034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3623,7 +3684,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114845769986532230}
+  grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 114726335806179316}
   isUsable: 0
   holdButtonToUse: 1
@@ -3634,23 +3695,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114993749958678886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908094385261194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!135 &135833121518020940
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -4306,7 +4350,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.20417072, y: 0.3850613, z: 0.0034634415}
+  m_ConnectedAnchor: {x: -0.2041712, y: 0.3850613, z: 0.0034634415}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -4526,7 +4570,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.27104133, y: -0.00000003073365, z: 0.00000035017732}
+  m_ConnectedAnchor: {x: -0.27104175, y: 0.00000013178216, z: 0.00000034202824}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
