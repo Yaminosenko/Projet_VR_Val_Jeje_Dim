@@ -7,7 +7,8 @@ public class OscilloWinCondition : MonoBehaviour {
     public GameObject greenSpline;
     Graph graph;
     public float _scaleY;
-    public float _offsetX;
+    public float _scaleX;
+    //public float _offsetX;
     public float _margin = 1f;
 
     public bool atelierDone = false;
@@ -23,15 +24,27 @@ public class OscilloWinCondition : MonoBehaviour {
         Completed();
         if (atelierDone == true)
         {
-            graph.offsetX = 2f;
-            greenSpline.transform.localScale = new Vector3(1.5f, 2, 1f);
+            graph.offsetX = 5f;
+            greenSpline.transform.localScale = new Vector3(3f, 1, 1f);
         }
 	}
 
-    public void Completed ()
+    /*public void Completed ()
     {
         if ((graph.offsetX < _offsetX +_margin &&
             graph.offsetX > _offsetX - _margin) &&
+            (OP.OS.transform.localScale.y < _scaleY + _margin &&
+            OP.OS.transform.localScale.y > _scaleY - _margin))
+        {
+            atelierDone = true;
+            OP.isDone = true;
+        }
+    }*/
+
+    public void Completed ()
+    {
+        if ((OP.OS.transform.localScale.x < _scaleX + _margin &&
+            OP.OS.transform.localScale.x > _scaleX - _margin) &&
             (OP.OS.transform.localScale.y < _scaleY + _margin &&
             OP.OS.transform.localScale.y > _scaleY - _margin))
         {

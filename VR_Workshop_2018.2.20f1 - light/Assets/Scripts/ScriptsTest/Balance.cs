@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class Balance : MonoBehaviour {
 
@@ -19,12 +20,14 @@ public class Balance : MonoBehaviour {
         {
             _count++;
             _mass = col.gameObject.GetComponent<Rigidbody>().mass;
+            col.gameObject.GetComponent<VRTK_InteractableObject>().isGrabbable = false;
         }
 
         if(col.gameObject.tag == "Corps")
         {
             _count++;
             _mass = 30;
+            col.gameObject.GetComponent<VRTK_InteractableObject>().isGrabbable = false;
         }
     }
 
