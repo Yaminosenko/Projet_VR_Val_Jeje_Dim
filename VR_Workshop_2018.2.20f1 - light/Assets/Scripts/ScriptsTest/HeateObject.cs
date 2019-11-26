@@ -57,36 +57,10 @@ public class HeateObject : MonoBehaviour {
 
     private void Update()
     {
-        //if (_rightGrabTrigger == true && _leftGrabTrigger == true)
-        //{
-        //    //_theVanne.angleLimits.minimum = Mathf.Infinity;
-        //    //_theVanne.angleLimits.maximum = Mathf.Infinity;
-        //}
-        //else
-        //{
-        //    //_theVanne.angleLimits.minimum = -10;
-        //    //_theVanne.angleLimits.maximum = 10;
-        //}
-
-
         GetGrabByLayer(8, _freeze._nearHeat);
     }
 
-    private void Test()
-    {
-
-        switch (_leftHand)
-        {
-           case false:
-
-                break;
-            case true:
-                break;
-            default:
-                Debug.Log("ui");
-                break;
-        }
-    }
+  
 
     public void GetGrabByLayer(int _layer, bool condition)
     {
@@ -96,7 +70,7 @@ public class HeateObject : MonoBehaviour {
             if (_rightGrab.GetGrabbedObject().layer == _layer)
             {
                 _rightHand = true;
-                condition = true;
+                _freeze._nearHeat = true;
             }
             else
             {
@@ -113,7 +87,7 @@ public class HeateObject : MonoBehaviour {
             if (_leftGrab.GetGrabbedObject().layer == _layer)
             {
                 _leftHand = true;
-                condition = true;
+                _freeze._nearHeat = true;
             }
             else
             {
@@ -127,7 +101,7 @@ public class HeateObject : MonoBehaviour {
 
         if (_rightHand == false && _leftHand == false)
         {
-            condition = false;
+            _freeze._nearHeat = false;
         }
     }
 
