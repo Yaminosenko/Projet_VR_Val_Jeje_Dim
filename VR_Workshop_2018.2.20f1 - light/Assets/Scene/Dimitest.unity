@@ -7753,6 +7753,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: ec57289b18316e54bac6345db8d15c83, type: 3}
+--- !u!1 &915561946
 --- !u!1 &895367961
 GameObject:
   m_ObjectHideFlags: 0

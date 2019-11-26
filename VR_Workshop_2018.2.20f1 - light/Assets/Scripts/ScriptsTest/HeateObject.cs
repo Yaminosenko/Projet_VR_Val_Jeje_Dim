@@ -96,7 +96,7 @@ public class HeateObject : MonoBehaviour {
             if (_rightGrab.GetGrabbedObject().layer == _layer)
             {
                 _rightHand = true;
-                _freeze._nearHeat = true;
+                condition = true;
             }
             else
             {
@@ -113,7 +113,7 @@ public class HeateObject : MonoBehaviour {
             if (_leftGrab.GetGrabbedObject().layer == _layer)
             {
                 _leftHand = true;
-                _freeze._nearHeat = true;
+                condition = true;
             }
             else
             {
@@ -127,7 +127,7 @@ public class HeateObject : MonoBehaviour {
 
         if (_rightHand == false && _leftHand == false)
         {
-            _freeze._nearHeat = false;
+            condition = false;
         }
     }
 
