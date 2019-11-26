@@ -23,6 +23,7 @@ using UnityEngine;
         private SliderFrostArea _sliderManager;
         public bool _isInFrostArea;
         public Rigidbody[] _arrayRd;
+        public VRTK_InteractableObject[] _arrayInteactable;
 
         public Transform[] _respawn;
          
@@ -71,11 +72,16 @@ using UnityEngine;
             GameObject _deadBody = Instantiate(_playerBody, _actualCameraTransform.position, _actualCameraTransform.rotation);
             if (_isInFrostArea == true)
             {
-            _arrayRd = _deadBody.GetComponentsInChildren<Rigidbody>();
-            foreach (Rigidbody item in _arrayRd)
-            {
-                item.isKinematic = true;
-            }
+                _arrayRd = _deadBody.GetComponentsInChildren<Rigidbody>();
+                _arrayInteactable = _deadBody.GetComponentsInChildren<VRTK_InteractableObject>();
+                foreach (Rigidbody item in _arrayRd)
+                {
+                    item.isKinematic = true;
+                }
+                foreach (VRTK_InteractableObject inter in _arrayInteactable)
+                {
+                    inter.isGrabbable = false;
+                }
             }
             _teleportDeath.TeleportBrooo(_tpDestination);
             _fade.Unfade(1f);

@@ -70,18 +70,6 @@ public class HeateObject : MonoBehaviour {
 
 
         GetGrabByLayer(8, _freeze._nearHeat);
-
-
-       
-
-       
-
-
-
-        _rightGrab.GetGrabbedObject();
-        _leftGrab.GetGrabbedObject();
-        Debug.Log(_rightGrab.GetGrabbedObject());
-        Debug.Log(_leftGrab.GetGrabbedObject());
     }
 
     private void Test()
