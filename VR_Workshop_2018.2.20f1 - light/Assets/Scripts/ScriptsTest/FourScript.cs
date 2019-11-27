@@ -133,11 +133,14 @@
             }
 
 
-            if (_currentJauge >= 100)
+            if (_currentJaugeVapeur >= 99)
             {
                 if (_oneTime == false)
                 {
                     _player._changeRespawn(1);
+                    _player.DeathIsComing();
+                    _currentJauge = 0;
+                    _currentJaugeVapeur = 0;
                     _oneTime = true;
                 }
             }

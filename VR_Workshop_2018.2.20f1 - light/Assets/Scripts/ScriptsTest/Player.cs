@@ -24,6 +24,7 @@ using UnityEngine;
         public bool _isInFrostArea;
         public Rigidbody[] _arrayRd;
         public VRTK_InteractableObject[] _arrayInteactable;
+        public VRTK_InteractableObject _KillObject;
 
         public Transform[] _respawn;
          
@@ -35,14 +36,21 @@ using UnityEngine;
         {
             _fade = GetComponent<VRTK_HeadsetFade>();
             _teleportDeath = GetComponent<DeathTeleportDestination>();
-        _sliderManager = GetComponent<SliderFrostArea>();
-       
+            _sliderManager = GetComponent<SliderFrostArea>();
 
 
-        _fade.HeadsetFadeStart += _fade_HeadsetFadeStart;
+            _KillObject.InteractableObjectTouched += InteractableObjectTouched;
+
+            _fade.HeadsetFadeStart += _fade_HeadsetFadeStart;
             _fade.HeadsetFadeComplete += _fade_HeadsetFadeComplete;
             _fade.HeadsetUnfadeStart += _fade_HeadsetUnfadeStart;
             _fade.HeadsetUnfadeComplete += _fade_HeadsetUnfadeComplete;
+
+        // récuperer un input
+        //var transformController = VRTK_DeviceFinder.DeviceTransform(VRTK_DeviceFinder.Devices.LeftController); // ne peut être appeler qu'une frame après le start
+        //var controllerEvents = transformController.GetComponent<VRTK_ControllerEvents>();
+
+        //controllerEvents.one
         }
 
         private void OnDisable()
@@ -92,6 +100,12 @@ using UnityEngine;
             //Debug.Log("1");
         }
 
+        protected virtual void InteractableObjectTouched(object sender, InteractableObjectEventArgs e)
+        {
+            DeathIsComing();
+        }
+
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.P))
@@ -101,7 +115,8 @@ using UnityEngine;
 
             if (_urDead == true)
             {
-                _fade.Fade(Color.black, 1f);
+            Debug.Log("bbb");
+            _fade.Fade(Color.black, 1f);
 
                 _urDead = false;
             }
@@ -122,6 +137,7 @@ using UnityEngine;
         public void DeathIsComing()
         {
              _urDead = true;
+             
         
             if (_sliderManager._isPull[0] == true && _sliderManager._isPull[1] == true)
             {
