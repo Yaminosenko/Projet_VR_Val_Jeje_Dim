@@ -413,7 +413,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2a03b68e4244b614ab01f25ebc829147, type: 3}
   - {fileID: 8300000, guid: e0c5689a5455d9a43a7b78516a8222fe, type: 3}
   - {fileID: 8300000, guid: 638ffd6b137a55e4ab8ce1871ddf9b2d, type: 3}
-  _currentJauge: 0
+  _currentJauge: 1
   _currentJaugeVapeur: 0
   _jaugeGigaMax: 0
   _currentDecrease: 0

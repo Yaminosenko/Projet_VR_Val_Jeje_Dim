@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using VRTK.GrabAttachMechanics;
 
 public class GrabDistance : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class GrabDistance : MonoBehaviour {
     private Transform transformControllerRight;
     private VRTK_ControllerEvents controllerEventsLeft;
     private VRTK_ControllerEvents controllerEventsRight;
+
+    public GameObject _rightHand;
+    public GameObject _leftHand;
 
 
     private void Start()
@@ -20,29 +24,53 @@ public class GrabDistance : MonoBehaviour {
     private void Update()
     {
 
-        float _rightTrigger = Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger");
-
-        if (controllerEventsLeft.triggerPressed == true && controllerEventsLeft != null)
+        
+        
+        if(controllerEventsLeft != null && controllerEventsRight != null)
         {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+            if (controllerEventsLeft.triggerPressed == true)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                Debug.Log("Did Hit");
+                Debug.Log("left");
+                RayCastTrigger(transformControllerLeft);
             }
-            else
+
+            if (controllerEventsRight.triggerPressed == true)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-                Debug.Log("Did not Hit");
+                Debug.Log("right");
+
+                RayCastTrigger(transformControllerRight);
             }
         }
-
-
-        Debug.Log(controllerEventsLeft.triggerClicked);
-        Debug.Log(controllerEventsLeft.triggerClicked);
         
 
+        //Debug.Log(controllerEventsLeft.triggerClicked);
+        //Debug.Log(controllerEventsLeft.triggerClicked);
+
+
+    }
+
+    void RayCastTrigger(Transform controller)
+    {
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(controller.position, controller.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        {
+            if (hit.transform.gameObject.GetComponent<VRTK_InteractableObject>() != null)
+            {
+                var _grab = hit.transform.gameObject.GetComponent<VRTK_ChildOfControllerGrabAttach>();
+
+                
+            }
+
+
+            Debug.DrawRay(controller.position, controller.TransformDirection(Vector3.forward) * hit.distance, Color.yellow, Mathf.Infinity);
+           
+        }
+        else
+        {
+            Debug.DrawRay(controller.position, controller.TransformDirection(Vector3.forward) * 1000, Color.white, Mathf.Infinity);
+            Debug.Log("Did not Hit");
+        }
     }
 
     IEnumerator GetControllerEvent()
