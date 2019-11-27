@@ -33,7 +33,7 @@ public class Balance : MonoBehaviour {
 
     private void Update()
     {
-
+        _currentMasse = Mathf.Clamp(_currentMasse, 0, _masseMax);
         if (_count > 0)
         {
             _count -= 1 * Time.deltaTime * 10;
@@ -48,7 +48,7 @@ public class Balance : MonoBehaviour {
     {
         float ratio = (float)_currentMasse / (float)_masseMax;
 
-        Debug.Log(_currentMasse);
+        
         Mathf.Clamp01(ratio);
         Vector3 newScale = _aiguille.transform.localPosition;
         newScale.x = ratio;

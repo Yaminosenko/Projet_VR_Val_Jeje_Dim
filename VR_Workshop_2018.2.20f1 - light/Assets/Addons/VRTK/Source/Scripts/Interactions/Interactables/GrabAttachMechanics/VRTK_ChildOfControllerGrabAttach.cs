@@ -29,6 +29,7 @@ namespace VRTK.GrabAttachMechanics
         /// <returns>Returns `true` if the grab is successful, `false` if the grab is unsuccessful.</returns>
         public override bool StartGrab(GameObject grabbingObject, GameObject givenGrabbedObject, Rigidbody givenControllerAttachPoint)
         {
+            //Debug.Log(grabbingObject + " " + givenGrabbedObject + " " + givenControllerAttachPoint);
             if (base.StartGrab(grabbingObject, givenGrabbedObject, givenControllerAttachPoint))
             {
                 SnapObjectToGrabToController(givenGrabbedObject);

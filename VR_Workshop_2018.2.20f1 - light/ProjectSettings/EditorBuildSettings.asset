@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Val_/ATELIERS/AteliersElectric.unity
     guid: 9262ac6b9f99c0d47a34650888b4af00
+  - enabled: 1
+    path: Assets/_Val_/ATELIERS/Tuyauterie3D/Tuyau3D.unity
+    guid: ac2ccffbf4c119a408e8605b0f2dec2e
   m_configObjects: {}
