@@ -706,12 +706,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1389880796}
   m_Script: {fileID: 11500000, guid: 8c9f41f514e9dfe4a856a8132fcd4755, type: 3}
+--- !u!1 &837875838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1661464032047590, guid: ffd65fcc72fe9da409aba2863de2f625,
+    type: 2}
+  m_PrefabInternal: {fileID: 1118595429}
 --- !u!43 &1000866270
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1608566
+  m_Name: pb_Mesh-2594
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1734,7 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fbaa3c9b4e34548bacb472e32f79b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToEnable: {fileID: 0}
+  objToEnable: {fileID: 837875838}
 --- !u!114 &1366432436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114587173434508044, guid: f6a8ceaeae2cab84483c553bfda4689e,
