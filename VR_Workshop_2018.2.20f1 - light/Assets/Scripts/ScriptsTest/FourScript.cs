@@ -29,10 +29,10 @@
 
         private AudioSource _audio;
         private float _startJauge = -150;
-        private float _maxJauge = 100;
+        private float _maxJauge = 180;
         private float _maxJaugeGigaMax = 300;
         private float _burnCoal = 0;
-        [SerializeField] private float _currentJauge;
+        [SerializeField] private float _currentJauge = -150;
         [SerializeField] private float _currentJaugeVapeur;
         [SerializeField] private float _jaugeGigaMax;
         [SerializeField] private float _currentDecrease;
@@ -139,13 +139,13 @@
                 _sifflet.SetValue(Mathf.Lerp(_sifflet.GetValue(), -0.4f, Time.deltaTime * 4));
             }
 
-            if(_currentJauge >= 99)
+            if(_currentJauge >= 180)
             {
                 _finish = true;
                 _player._changeRespawn(1);
             }
 
-            if (_currentJaugeVapeur >= 99)
+            if (_currentJaugeVapeur >= 180)
             {
                 if (_oneTime == false)
                 {
@@ -162,34 +162,37 @@
             UpdateJaugeGigaMax();
 
 
-            Quaternion rota = _aiguilleJauge.transform.rotation;
-            rota.x = _currentJauge;
-            Debug.Log(rota);
-            //_aiguilleJauge.transform.rotation = rota;
+            //Quaternion rota = _aiguilleJauge.transform.rotation;
+            ////rota.x = _currentJauge;
+         
+            //Debug.Log(rota);
+            _aiguilleJauge.transform.rotation = Quaternion.Euler(_currentJauge, -90, 540);
+            _aiguilleJaugeVapeur.transform.rotation = Quaternion.Euler(_currentJaugeVapeur, -90, 540);
+
 
         }
 
 
         void Jauge()
         {
-            if (_currentJauge >= 0 && _currentJauge < 25)
+            if (_currentJauge >= -150 && _currentJauge < -100)
             {
                 _currentJauge -= (_currentDecrease + 3) * Time.deltaTime;
             }
-            else if (_currentJauge >= 25 && _currentJauge < 50)
+            else if (_currentJauge >= -100 && _currentJauge < 10)
             {
-                _currentJauge -= (_currentDecrease + 2) * Time.deltaTime;
+                _currentJauge -= (_currentDecrease + 5) * Time.deltaTime;
                 _currentJaugeVapeur += _currentDecrease * Time.deltaTime;
                 //Debug.Log("ui");
             }
-            else if (_currentJauge >= 50 && _currentJauge < 75)
+            else if (_currentJauge >= 10 && _currentJauge < 100)
             {
-                _currentJaugeVapeur += 4 * Time.deltaTime;
+                _currentJaugeVapeur += 8 * Time.deltaTime;
                 _currentJauge -= _currentDecrease * Time.deltaTime;
             }
-            else if (_currentJauge >= 75)
+            else if (_currentJauge >= 50)
             {
-                _currentJaugeVapeur += 6 * Time.deltaTime;
+                _currentJaugeVapeur += 10 * Time.deltaTime;
                 _currentJauge -= (_currentDecrease) * Time.deltaTime;
             }
 
@@ -200,9 +203,9 @@
                 _currentJauge += _currentIncrease * Time.deltaTime*2;
             }
 
-            if (_currentJaugeVapeur > 25)
+            if (_currentJaugeVapeur > -100)
             {
-                _currentDecrease = _initialDeacrease / (_currentJaugeVapeur / 30);
+                //_currentDecrease = _initialDeacrease / (_currentJaugeVapeur / 30);
 
             }
             else
@@ -229,8 +232,8 @@
             }
 
 
-            _currentJauge = Mathf.Clamp(_currentJauge, 0, 100);
-            _currentJaugeVapeur = Mathf.Clamp(_currentJaugeVapeur, 0, 100);
+            _currentJauge = Mathf.Clamp(_currentJauge, _startJauge, _maxJauge);
+            _currentJaugeVapeur = Mathf.Clamp(_currentJaugeVapeur, _startJauge, _maxJauge);
             _jaugeGigaMax = Mathf.Clamp(_jaugeGigaMax, 0, _maxJaugeGigaMax);
         }
 

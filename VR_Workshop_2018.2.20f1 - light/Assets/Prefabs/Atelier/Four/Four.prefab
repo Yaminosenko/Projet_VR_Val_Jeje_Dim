@@ -415,8 +415,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 638ffd6b137a55e4ab8ce1871ddf9b2d, type: 3}
   _finish: 0
   _theDoorOfTheEnd: {fileID: 0}
-  _currentJauge: 1
-  _currentJaugeVapeur: 0
+  _aiguilleJauge: {fileID: 0}
+  _aiguilleJaugeVapeur: {fileID: 0}
+  _currentJauge: -150
+  _currentJaugeVapeur: -150
   _jaugeGigaMax: 0
   _currentDecrease: 0
   _initialDeacrease: 3
