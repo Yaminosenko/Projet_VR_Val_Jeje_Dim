@@ -16,19 +16,9 @@ public class SliderFrostArea : MonoBehaviour {
 
     public bool[] _isPull;
 
-    //public bool _sliderBool1;
-    //public bool _sliderBool2;
-    //public bool _sliderBool3;
 
-    public bool[] _sliderBool;
-
-
-    //private bool _doubleTrue1 = false;
-    //private bool _doubleTrue2 = false;
-    //public bool[] _isPull2;
-    //public bool[] _isPull3;
-
-    public GameObject[] _doors;
+    public GameObject _doors;
+    public bool[] _sliderTrue;
     public GameObject[] _light;
 
     public Material m_green;
@@ -109,6 +99,7 @@ public class SliderFrostArea : MonoBehaviour {
 
     public void ChangeSlider()
     {
+        _sliderTrue[_arraySlider] = true;
         _arraySlider++;
         _listGoupe.Clear();
 
