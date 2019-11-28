@@ -70,6 +70,12 @@
                     //Debug.Log(_count);
                 }
 
+                if(col.gameObject.tag == "Player")
+                {
+                    _count += 5;
+                    _burnCoal += 5;
+                }
+
 
                 _shovel.UnsnapCoal();
                 _shovel._coal.Clear();
@@ -156,10 +162,10 @@
                 }
             }
 
-            Jauge();
-            UpdateJauge();
-            UpdateJaugeVapeur();
-            UpdateJaugeGigaMax();
+            //Jauge();
+            //UpdateJauge();
+            //UpdateJaugeVapeur();
+            //UpdateJaugeGigaMax();
 
 
             //Quaternion rota = _aiguilleJauge.transform.rotation;

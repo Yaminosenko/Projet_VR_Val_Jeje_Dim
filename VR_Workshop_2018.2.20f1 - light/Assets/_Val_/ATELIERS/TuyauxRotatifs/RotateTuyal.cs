@@ -6,7 +6,8 @@ public class RotateTuyal : MonoBehaviour
 {
     public Transform[] manivelle;
     public float _angleY;
-    public int onXint;
+
+    public int onXint = 0;
 
 	void Update ()
     {
@@ -28,7 +29,7 @@ public class RotateTuyal : MonoBehaviour
         transform.localEulerAngles = new Vector3(0f, _angleY, 0f);
     }
 
-    public void OnTriggerStay(Collider col)
+    public void OnTriggerStay (Collider col)
     {
         if (col.tag == "tuyal")
         {
@@ -36,7 +37,7 @@ public class RotateTuyal : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit(Collider col)
+    public void OnTriggerExit (Collider col)
     {
         if (col.tag == "tuyal")
         {
