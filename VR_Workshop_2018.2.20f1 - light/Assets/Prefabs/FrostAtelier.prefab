@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 114315384874912112}
   - component: {fileID: 54191304137300840}
   - component: {fileID: 114278479705062428}
+  - component: {fileID: 114630947949600032}
   m_Layer: 8
   m_Name: Scource chaleur
   m_TagString: Untagged
@@ -1852,6 +1853,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _frostEffect: {fileID: 0}
   _player: {fileID: 0}
+--- !u!114 &114630947949600032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726825628911854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc4b5dd2be1cea4aaea2850b910d3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearTouchHighlight: {r: 1, g: 1, b: 1, a: 0.20392157}
+  touchHighlight: {r: 1, g: 0.4481132, b: 0.4481132, a: 0.20392157}
+  grabHighlight: {r: 0, g: 0, b: 0, a: 0}
+  useHighlight: {r: 0, g: 0, b: 0, a: 0}
+  objectToMonitor: {fileID: 0}
+  objectToHighlight: {fileID: 0}
+  objectHighlighter: {fileID: 0}
+  objectToAffect: {fileID: 0}
 --- !u!114 &114681972038932998
 MonoBehaviour:
   m_ObjectHideFlags: 1

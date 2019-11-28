@@ -23,9 +23,12 @@
 
         public bool _finish = false;
         public GameObject _theDoorOfTheEnd;
+        public GameObject _aiguilleJauge;
+        public GameObject _aiguilleJaugeVapeur;
 
 
         private AudioSource _audio;
+        private float _startJauge = -150;
         private float _maxJauge = 100;
         private float _maxJaugeGigaMax = 300;
         private float _burnCoal = 0;
@@ -35,6 +38,8 @@
         [SerializeField] private float _currentDecrease;
         [SerializeField] private float _initialDeacrease;
         [SerializeField] private float _currentIncrease;
+
+
         private int _count = 0;
         //private int _numberOfCoal = 0;
         private bool _isHot = false;
@@ -90,7 +95,7 @@
                 _levier.SetValue(Mathf.Lerp(_levier.GetValue(), 0, Time.deltaTime * 4));
             }
 
-            if (_levier.GetValue() >= 75)
+            if (_levier.GetValue() >= 25)
             {
                 _vapeurOut = true;
             }
@@ -106,7 +111,7 @@
 
                 _currentJaugeVapeur -= 6 * Time.deltaTime;
                 _currentJauge -= 3 * Time.deltaTime;
-                _player._urDead = true;
+                //_player._urDead = true;
                 if(_renoStart == false && _currentJaugeVapeur >= 25)
                 {
                     //_audio.clip = _renoSound[0];
@@ -155,6 +160,13 @@
             UpdateJauge();
             UpdateJaugeVapeur();
             UpdateJaugeGigaMax();
+
+
+            Quaternion rota = _aiguilleJauge.transform.rotation;
+            rota.x = _currentJauge;
+            Debug.Log(rota);
+            //_aiguilleJauge.transform.rotation = rota;
+
         }
 
 
