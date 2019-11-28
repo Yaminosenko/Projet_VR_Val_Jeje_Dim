@@ -10,12 +10,12 @@
     public class FourScript : MonoBehaviour
     {
 
-        public Image _jauge;
-        public Image _vapeur;
-        public Image _gigaMax;
-        public Canvas _can;
+        //public Image _jauge;
+        //public Image _vapeur;
+        //public Image _gigaMax;
+        //public Canvas _can;
         public VRTK_ArtificialRotator _levier;
-        public VRTK_ArtificialRotator _valve;
+        //public VRTK_ArtificialRotator _valve;
         public VRTK_ArtificialSlider _sifflet;
         public Player _player;
 
@@ -106,10 +106,10 @@
                 _vapeurOut = true;
             }
 
-            if (_valve.GetControlInteractableObject().IsGrabbed() == false)
-            {
-                _valve.SetValue(Mathf.Lerp(_valve.GetValue(), 0, Time.deltaTime * 4));
-            }
+            //if (_valve.GetControlInteractableObject().IsGrabbed() == false)
+            //{
+            //    _valve.SetValue(Mathf.Lerp(_valve.GetValue(), 0, Time.deltaTime * 4));
+            //}
 
             if (_sifflet.GetValue() < -0.70f)
             {
@@ -118,7 +118,7 @@
                 _currentJaugeVapeur -= 6 * Time.deltaTime;
                 _currentJauge -= 3 * Time.deltaTime;
                 //_player._urDead = true;
-                if(_renoStart == false && _currentJaugeVapeur >= 25)
+                if(_renoStart == false && _currentJaugeVapeur >= -100)
                 {
                     //_audio.clip = _renoSound[0];
                     _audio.Play();
@@ -162,7 +162,7 @@
                 }
             }
 
-            //Jauge();
+            Jauge();
             //UpdateJauge();
             //UpdateJaugeVapeur();
             //UpdateJaugeGigaMax();
@@ -172,8 +172,8 @@
             ////rota.x = _currentJauge;
          
             //Debug.Log(rota);
-            _aiguilleJauge.transform.rotation = Quaternion.Euler(_currentJauge, -90, 540);
-            _aiguilleJaugeVapeur.transform.rotation = Quaternion.Euler(_currentJaugeVapeur, -90, 540);
+            _aiguilleJauge.transform.rotation = Quaternion.Euler(_currentJauge, 180, 540);
+            _aiguilleJaugeVapeur.transform.rotation = Quaternion.Euler(_currentJaugeVapeur, 180, 540);
 
 
         }
@@ -183,7 +183,7 @@
         {
             if (_currentJauge >= -150 && _currentJauge < -100)
             {
-                _currentJauge -= (_currentDecrease + 3) * Time.deltaTime;
+                _currentJauge -= (10) * Time.deltaTime;
             }
             else if (_currentJauge >= -100 && _currentJauge < 10)
             {
@@ -193,12 +193,12 @@
             }
             else if (_currentJauge >= 10 && _currentJauge < 100)
             {
-                _currentJaugeVapeur += 8 * Time.deltaTime;
+                _currentJaugeVapeur += 15 * Time.deltaTime;
                 _currentJauge -= _currentDecrease * Time.deltaTime;
             }
             else if (_currentJauge >= 50)
             {
-                _currentJaugeVapeur += 10 * Time.deltaTime;
+                _currentJaugeVapeur += 20 * Time.deltaTime;
                 _currentJauge -= (_currentDecrease) * Time.deltaTime;
             }
 
@@ -232,10 +232,10 @@
                 }
             }
 
-            if(_valve.GetValue() > 50)
-            {
-                _jaugeGigaMax -= _valve.GetValue() / 4 * Time.deltaTime;
-            }
+            //if(_valve.GetValue() > 50)
+            //{
+            //    _jaugeGigaMax -= _valve.GetValue() / 4 * Time.deltaTime;
+            //}
 
 
             _currentJauge = Mathf.Clamp(_currentJauge, _startJauge, _maxJauge);
@@ -243,43 +243,43 @@
             _jaugeGigaMax = Mathf.Clamp(_jaugeGigaMax, 0, _maxJaugeGigaMax);
         }
 
-        void UpdateJauge()
-        {
-            float ratio = (float)_currentJauge / (float)_maxJauge;
+        //void UpdateJauge()
+        //{
+        //    float ratio = (float)_currentJauge / (float)_maxJauge;
 
-            //Debug.Log(ratio);
-            Mathf.Clamp01(ratio);
+        //    //Debug.Log(ratio);
+        //    Mathf.Clamp01(ratio);
 
-            Vector3 newScale = _jauge.transform.localScale;
-            newScale.y = ratio;
-            _jauge.transform.localScale = newScale;
+        //    Vector3 newScale = _jauge.transform.localScale;
+        //    newScale.y = ratio;
+        //    _jauge.transform.localScale = newScale;
 
 
-        }
+        //}
 
-        void UpdateJaugeVapeur()
-        {
-            float ratio = (float)_currentJaugeVapeur / (float)_maxJauge;
+        //void UpdateJaugeVapeur()
+        //{
+        //    float ratio = (float)_currentJaugeVapeur / (float)_maxJauge;
 
-            //Debug.Log(ratio);
-            Mathf.Clamp01(ratio);
+        //    //Debug.Log(ratio);
+        //    Mathf.Clamp01(ratio);
 
-            Vector3 newScale = _vapeur.transform.localScale;
-            newScale.y = ratio;
-            _vapeur.transform.localScale = newScale;
-        }
+        //    Vector3 newScale = _vapeur.transform.localScale;
+        //    newScale.y = ratio;
+        //    _vapeur.transform.localScale = newScale;
+        //}
 
-        void UpdateJaugeGigaMax()
-        {
-            float ratio = (float)_jaugeGigaMax / (float)_maxJaugeGigaMax;
+        //void UpdateJaugeGigaMax()
+        //{
+        //    float ratio = (float)_jaugeGigaMax / (float)_maxJaugeGigaMax;
 
-            //Debug.Log(ratio);
-            Mathf.Clamp01(ratio);
+        //    //Debug.Log(ratio);
+        //    Mathf.Clamp01(ratio);
 
-            Vector3 newScale = _gigaMax.transform.localScale;
-            newScale.y = ratio;
-            _gigaMax.transform.localScale = newScale;
-        }
+        //    Vector3 newScale = _gigaMax.transform.localScale;
+        //    newScale.y = ratio;
+        //    _gigaMax.transform.localScale = newScale;
+        //}
 
     }
 }
