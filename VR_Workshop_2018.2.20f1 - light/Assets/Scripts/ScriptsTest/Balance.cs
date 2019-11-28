@@ -10,7 +10,8 @@ public class Balance : MonoBehaviour {
     public float _masseMax = 100;
     private float _count = 0;
     private float _mass;
-
+    public GameObject objToEnable;
+    public Player _playerManager;
 
 
     private void OnTriggerEnter(Collider col)
@@ -40,6 +41,11 @@ public class Balance : MonoBehaviour {
             _currentMasse += _mass * Time.deltaTime * 10;
         }
 
+        if(_currentMasse >= 99)
+        {
+            objToEnable.SetActive(true);
+            _playerManager._changeRespawn(2);
+        }
 
         UpdateJauge();
     }

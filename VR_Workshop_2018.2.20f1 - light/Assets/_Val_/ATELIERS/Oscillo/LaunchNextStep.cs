@@ -7,6 +7,7 @@ public class LaunchNextStep : MonoBehaviour
 	FusibleBoardManager FBM;
 	OscilloWinCondition OWC;
 	public GameObject objToEnable;
+	public GameObject objToEnable2;
 
 	void Start () {
 		if (gameObject.GetComponent<FusibleBoardManager>() != null)
@@ -24,11 +25,17 @@ public class LaunchNextStep : MonoBehaviour
 		{
 			objToEnable.SetActive(true);
 			gameObject.GetComponent<LaunchNextStep>().enabled = false;
-		}
+            if (objToEnable2 != null)
+            {
+                objToEnable2.SetActive(true);
+            }
+        }
 		if (OWC != null && OWC.atelierDone == true)
 		{
 			objToEnable.SetActive(true);
 			gameObject.GetComponent<LaunchNextStep>().enabled = false;
 		}
+
+        
 	}
 }

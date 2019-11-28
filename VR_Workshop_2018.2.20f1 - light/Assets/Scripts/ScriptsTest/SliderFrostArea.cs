@@ -26,15 +26,14 @@ public class SliderFrostArea : MonoBehaviour {
     private Renderer _lightRenderer;
 
     private int _arraySlider = 0;
+    public GameObject objToEnable;
+    private Player _playerManager;
 
     private void Awake()
     {
+        _playerManager = gameObject.GetComponent<Player>();
         _listGoupe.Add(_slider1);
         _lightRenderer = _light[0].GetComponent<Renderer>();
-        //_listGoupe.Add(_slider2);
-        //_listGoupe.Add(_slider3);
-
-        //_listGoupe.ToArray(_evryGroup);
     }
 
 
@@ -56,13 +55,11 @@ public class SliderFrostArea : MonoBehaviour {
         }
 
 
-        //for (int i = 0; i < _isPull.Length; i++)
-        //{
-        //    if (_isPull[i] == true)
-        //    {
-        //        _doors[_arraySlider].transform.position = new Vector3(_doors[_arraySlider].transform.position.x,5, _doors[_arraySlider].transform.position.z);
-        //    }
-        //}
+        if(_sliderTrue[0] == true && _sliderTrue[1] == true && _sliderTrue[2] == true)
+        {
+            objToEnable.SetActive(true);
+            _playerManager._changeRespawn(3);
+        }
     }
 
 
