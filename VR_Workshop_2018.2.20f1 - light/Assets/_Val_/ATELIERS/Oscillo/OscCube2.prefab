@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4085835571985460}
   - component: {fileID: 33592378445207960}
   - component: {fileID: 23741962281847528}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: OscCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
