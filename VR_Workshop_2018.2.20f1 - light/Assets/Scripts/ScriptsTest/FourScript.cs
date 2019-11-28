@@ -21,7 +21,8 @@
 
         public AudioClip[] _renoSound;
 
-        
+        public bool _finish = false;
+        public GameObject _theDoorOfTheEnd;
 
 
         private AudioSource _audio;
@@ -133,6 +134,10 @@
                 _sifflet.SetValue(Mathf.Lerp(_sifflet.GetValue(), -0.4f, Time.deltaTime * 4));
             }
 
+            if(_currentJauge >= 99)
+            {
+                _finish = true;
+            }
 
             if (_currentJaugeVapeur >= 99)
             {
