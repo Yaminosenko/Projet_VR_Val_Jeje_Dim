@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 8bb84dce1a513764395518566295b448
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: articulation_bassin_low
+    100002: articulation_bassin_low1
+    100004: avant_bras_low
+    100006: avant_bras_low1
+    100008: bassin_low
+    100010: bras_low
+    100012: bras_low1
+    100014: center
+    100016: center_bassin
+    100018: Contour_Oeil_low
+    100020: Corps_low
+    100022: epaule_low
+    100024: epaule_low1
+    100026: "f\xE9mur_low"
+    100028: "f\xE9mur_low1"
+    100030: Genou_low
+    100032: Genou_low1
+    100034: joint10
+    100036: joint11
+    100038: joint18
+    100040: joint2
+    100042: joint2 1
+    100044: joint3
+    100046: joint3 1
+    100048: joint4
+    100050: joint4 1
+    100052: joint5
+    100054: joint5 1
+    100056: joint6
+    100058: joint6 1
+    100060: joint7
+    100062: joint7 1
+    100064: joint8
+    100066: L
+    100068: main_low
+    100070: main_low1
+    100072: manche_bassin_low
+    100074: manche_bassin_low1
+    100076: manche_poignet_low
+    100078: manche_poignet_low1
+    100080: Personnage_low
+    100082: //RootNode
+    100084: Pied_low
+    100086: Pied_low1
+    100088: Plaque_epaule_low
+    100090: Plaque_epaule_low1
+    100092: Poignet_low
+    100094: Poignet_low1
+    100096: R
+    100098: Suport_main_low
+    100100: Suport_main_low1
+    400000: articulation_bassin_low
+    400002: articulation_bassin_low1
+    400004: avant_bras_low
+    400006: avant_bras_low1
+    400008: bassin_low
+    400010: bras_low
+    400012: bras_low1
+    400014: center
+    400016: center_bassin
+    400018: Contour_Oeil_low
+    400020: Corps_low
+    400022: epaule_low
+    400024: epaule_low1
+    400026: "f\xE9mur_low"
+    400028: "f\xE9mur_low1"
+    400030: Genou_low
+    400032: Genou_low1
+    400034: joint10
+    400036: joint11
+    400038: joint18
+    400040: joint2
+    400042: joint2 1
+    400044: joint3
+    400046: joint3 1
+    400048: joint4
+    400050: joint4 1
+    400052: joint5
+    400054: joint5 1
+    400056: joint6
+    400058: joint6 1
+    400060: joint7
+    400062: joint7 1
+    400064: joint8
+    400066: L
+    400068: main_low
+    400070: main_low1
+    400072: manche_bassin_low
+    400074: manche_bassin_low1
+    400076: manche_poignet_low
+    400078: manche_poignet_low1
+    400080: Personnage_low
+    400082: //RootNode
+    400084: Pied_low
+    400086: Pied_low1
+    400088: Plaque_epaule_low
+    400090: Plaque_epaule_low1
+    400092: Poignet_low
+    400094: Poignet_low1
+    400096: R
+    400098: Suport_main_low
+    400100: Suport_main_low1
+    2100000: lambert24
+    2300000: bassin_low
+    2300002: Contour_Oeil_low
+    2300004: Corps_low
+    2300006: Plaque_epaule_low
+    2300008: Plaque_epaule_low1
+    3300000: bassin_low
+    3300002: Contour_Oeil_low
+    3300004: Corps_low
+    3300006: Plaque_epaule_low
+    3300008: Plaque_epaule_low1
+    4300000: Corps_low
+    4300002: Contour_Oeil_low
+    4300004: Plaque_epaule_low
+    4300006: epaule_low
+    4300008: bras_low
+    4300010: avant_bras_low
+    4300012: manche_poignet_low
+    4300014: Poignet_low
+    4300016: Suport_main_low
+    4300018: main_low
+    4300020: bassin_low
+    4300022: manche_bassin_low
+    4300024: articulation_bassin_low
+    4300026: "f\xE9mur_low"
+    4300028: Genou_low
+    4300030: Pied_low
+    4300032: avant_bras_low1
+    4300034: bras_low1
+    4300036: epaule_low1
+    4300038: Plaque_epaule_low1
+    4300040: manche_poignet_low1
+    4300042: Poignet_low1
+    4300044: Suport_main_low1
+    4300046: main_low1
+    4300048: manche_bassin_low1
+    4300050: Pied_low1
+    4300052: Genou_low1
+    4300054: "f\xE9mur_low1"
+    4300056: articulation_bassin_low1
+    9500000: //RootNode
+    13700000: articulation_bassin_low
+    13700002: articulation_bassin_low1
+    13700004: avant_bras_low
+    13700006: avant_bras_low1
+    13700008: bras_low
+    13700010: bras_low1
+    13700012: epaule_low
+    13700014: epaule_low1
+    13700016: "f\xE9mur_low"
+    13700018: "f\xE9mur_low1"
+    13700020: Genou_low
+    13700022: Genou_low1
+    13700024: main_low
+    13700026: main_low1
+    13700028: manche_bassin_low
+    13700030: manche_bassin_low1
+    13700032: manche_poignet_low
+    13700034: manche_poignet_low1
+    13700036: Pied_low
+    13700038: Pied_low1
+    13700040: Poignet_low
+    13700042: Poignet_low1
+    13700044: Suport_main_low
+    13700046: Suport_main_low1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
