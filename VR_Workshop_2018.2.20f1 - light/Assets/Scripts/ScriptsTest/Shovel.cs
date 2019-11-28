@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shovel : MonoBehaviour {
 
     public GameObject _prefabCoal;
+    public GameObject[] _prefabCoalRandom;
     public GameObject[] _offsets;
     public List<GameObject> _coal = new List<GameObject>();
     public bool _isSnap = false;
@@ -37,8 +38,9 @@ public class Shovel : MonoBehaviour {
     {
         for (int i = 0; i < Random.Range(3,_offsets.Length); i++)
         {
+            
             //Instantiate GameObject _coalChild = Instantiate(_coal, transform.position, _cone);
-            GameObject _coalChild = Instantiate(_prefabCoal, _offsets[i].transform.position, _offsets[i].transform.rotation);
+            GameObject _coalChild = Instantiate(_prefabCoalRandom[Random.Range(0, 3)], _offsets[i].transform.position, _offsets[i].transform.rotation);
             _coalChild.transform.parent = gameObject.transform;
             _coal.Add(_coalChild);
            // _coalChild.GetComponent<FixedJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
