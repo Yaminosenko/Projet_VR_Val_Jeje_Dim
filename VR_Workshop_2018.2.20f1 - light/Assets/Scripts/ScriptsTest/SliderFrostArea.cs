@@ -21,6 +21,8 @@ public class SliderFrostArea : MonoBehaviour {
     public bool[] _sliderTrue;
     public GameObject[] _light;
 
+    public GameObject[] _body;
+
     public Material m_green;
     public Material m_red;
     private Renderer _lightRenderer;
@@ -97,6 +99,7 @@ public class SliderFrostArea : MonoBehaviour {
     public void ChangeSlider()
     {
         _sliderTrue[_arraySlider] = true;
+        _body[_arraySlider].SetActive(true);
         _arraySlider++;
         _listGoupe.Clear();
 
