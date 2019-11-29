@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scenesNamesToLoad:
-  - Dimitest
-  - ToyauxRotatifs
-  - AteliersElectric
-  - Tuyau3D
+  - Scene_Blockout
+  - AtelierElectricARTED
+  - TuyauxRotatifsARTED
