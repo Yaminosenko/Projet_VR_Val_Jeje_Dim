@@ -6,6 +6,7 @@ public class LaunchNextStep : MonoBehaviour
 {
 	FusibleBoardManager FBM;
 	OscilloWinCondition OWC;
+    TuyalMechanic aaa;
 	public GameObject objToEnable;
 	public GameObject objToEnable2;
 
@@ -18,7 +19,11 @@ public class LaunchNextStep : MonoBehaviour
 		{
 			OWC = gameObject.GetComponent<OscilloWinCondition>();
 		}
-	}
+        if (gameObject.GetComponent<TuyalMechanic>() != null)
+        {
+            aaa = gameObject.GetComponent<TuyalMechanic>();
+        }
+    }
 	
 	void Update () {
 		if (FBM != null && FBM.atelierFinished == true)
@@ -36,6 +41,8 @@ public class LaunchNextStep : MonoBehaviour
 			gameObject.GetComponent<LaunchNextStep>().enabled = false;
 		}
 
-        
-	}
+       
+
+
+    }
 }

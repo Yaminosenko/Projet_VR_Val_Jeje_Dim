@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: SM_tuyau_tournant_low
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_tuyaux
+    second: {fileID: 2100000, guid: 606e311a2edf0c145aec44b6775be447, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

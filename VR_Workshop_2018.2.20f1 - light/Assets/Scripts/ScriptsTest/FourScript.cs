@@ -188,7 +188,7 @@
             else if (_currentJauge >= -100 && _currentJauge < 10)
             {
                 _currentJauge -= (_currentDecrease + 5) * Time.deltaTime;
-                _currentJaugeVapeur += _currentDecrease * Time.deltaTime;
+                _currentJaugeVapeur += 10 * Time.deltaTime;
                 //Debug.Log("ui");
             }
             else if (_currentJauge >= 10 && _currentJauge < 100)
@@ -225,9 +225,9 @@
                 _currentJauge -= 10 * Time.deltaTime;
                 _jaugeGigaMax += _maxJauge * Time.deltaTime;
 
-                if (_currentJaugeVapeur <= 0)
+                if (_currentJaugeVapeur <= -150)
                 {
-                    _currentJaugeVapeur = 0;
+                    _currentJaugeVapeur = -150;
                     _vapeurOut = false;
                 }
             }

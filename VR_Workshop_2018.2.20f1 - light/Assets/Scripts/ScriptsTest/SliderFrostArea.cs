@@ -75,7 +75,7 @@ public class SliderFrostArea : MonoBehaviour {
                 {
                     float _value = slider[i].GetValue();
 
-                    if (_value >= 0.35f)
+                    if (_value >= 0.20f)
                     {
                         _isPull[i] = true;
                     }

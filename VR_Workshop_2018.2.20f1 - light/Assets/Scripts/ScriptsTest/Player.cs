@@ -76,10 +76,15 @@ using UnityEngine;
            // Debug.Log("2");
             //_tp.Teleport(_tpDestination,_tpDestination.position, _tpDestination.rotation,true);
             
+        if(_cameraRig != null)
+        {
             _actualCameraTransform = _cameraRig.transform;
+        }
+            
             GameObject _deadBody = Instantiate(_playerBody, _actualCameraTransform.position, _actualCameraTransform.rotation);
             if (_isInFrostArea == true)
             {
+            Debug.Log("yaaa");
                 _arrayRd = _deadBody.GetComponentsInChildren<Rigidbody>();
                 _arrayInteactable = _deadBody.GetComponentsInChildren<VRTK_InteractableObject>();
                 foreach (Rigidbody item in _arrayRd)
