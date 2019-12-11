@@ -41,7 +41,12 @@ public class LaunchNextStep : MonoBehaviour
 			gameObject.GetComponent<LaunchNextStep>().enabled = false;
 		}
 
-       
+        if (aaa != null && aaa.atelierDone == true)
+        {
+            Debug.Log("uii");
+            objToEnable.SetActive(true);
+            gameObject.GetComponent<LaunchNextStep>().enabled = false;
+        }
 
 
     }
